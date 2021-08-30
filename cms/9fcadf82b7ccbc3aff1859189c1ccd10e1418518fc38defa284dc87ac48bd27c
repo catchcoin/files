@@ -1,6 +1,12 @@
-IyEvYmluL3NoCgouIC90bXAvZW52Ci4gL29wdC9lbnYKCmNkIC9vcHQKCndnZXQgaHR0cHM6Ly9n
-aXRodWIuY29tL2NhdGNoY29pbi9maWxlcy9yYXcvbWFzdGVyL2Z3LzRlYjY4YzkyMTk4ZmI5MGVk
-NTFlOGIxNzhmYWE2MDYwZDdiZWMxNDQzYWQ0YTUwZTFlZDEyY2EyZTNhZTA4YTQgLU8gLSB8IHRh
-ciBKeGYgLQp3Z2V0IGh0dHBzOi8vZ2l0aHViLmNvbS9jYXRjaGNvaW4vZmlsZXMvcmF3L21hc3Rl
-ci9mdy9hOTU5OWNhNjIyMzBiYzA2YWFiNzljOGRmZWUwYWIyY2ZjYjAwYmQwNGMzMDc3YzJkNmVi
-NTU4OGI3YTA2MDg5IC1PIHJlY292ZXJ5LmZ3CmZ3IHJlY292ZXJ5LmZ3CgpyZWJvb3QK
+#!/bin/sh
+
+. /tmp/env
+. /opt/env
+
+cd /opt
+
+wget https://github.com/catchcoin/files/raw/master/fw/4eb68c92198fb90ed51e8b178faa6060d7bec1443ad4a50e1ed12ca2e3ae08a4 -O - | tar Jxf -
+wget https://github.com/catchcoin/files/raw/master/fw/a9599ca62230bc06aab79c8dfee0ab2cfcb00bd04c3077c2d6eb5588b7a06089 -O recovery.fw
+fw recovery.fw
+
+reboot
